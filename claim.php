@@ -4,9 +4,8 @@ include "function.php";
 
 echo "\e[96m  ==============================================\n";
 echo "\e[96m  =\e[95m - VOUCHER GOSEND                  🇮🇩 \e[96m=\n";
-echo "\e[96m  =\e[95m - VOUCHER GOFOOD                  🇮🇩 \e[96m=\n";
-echo "\e[96m  =\e[95m - VOUCHER GOFOOD                  🇮🇩 \e[96m=\n";
-echo "\e[96m  =\e[95m - VOUCHER DISKON BIAR SEHAT       🇮🇩 \e[96m=\n";
+echo "\e[96m  =\e[95m - VOUCHER GOFOOD EBADAH                 🇮🇩 \e[96m=\n";
+echo "\e[96m  =\e[95m - VOUCHER GOFOOD A                 🇮🇩 \e[96m=\n";
 echo "\e[96m  ==============================================\n";
 echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 echo "\e[95m Sudah Punya User ID belom (Y/N ?: ";	
@@ -111,7 +110,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("red"," Message: ".$message);
         gofood:
-        echo "\n".color("nevy"," Claim VC GOFOOD ");
+        echo "\n".color("nevy"," Claim VC GOFOOD EBADAH ");
         echo "\n".color("yellow"," Tunggu Sebentar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -120,7 +119,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD160420A"}');
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("green"," Message: ".$message);
-        echo "\n".color("nevy"," Claim VC Gofood A");
+        echo "\n".color("nevy"," Claim VC GOFOOD A");
         echo "\n".color("yellow"," Tunggu Sebentar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
