@@ -87,7 +87,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo color("nevy","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("nevy","\n▬▬▬▬▬▬▬▬▬▬▬▬ AUTO REDEEM VOUCHER GOJEK ▬▬▬▬▬▬▬▬▬▬▬▬")
-	echo "\n".color("nevy"," Mohon sabar ");
+	echo "\n".color("nevy"," Claim VC EATLAH");
         echo "\n".color("yellow","Tunggu Sebentar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -115,7 +115,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("red"," Message: ".$message);
         gofood:
-        echo "\n".color("nevy"," Claim VC GOFOOD EBADAH ");
+        echo "\n".color("nevy"," Claim VC GOFOOD B");
         echo "\n".color("yellow"," Tunggu Sebentar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -124,11 +124,17 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD160420A"}');
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("green"," Message: ".$message);
-        echo "\n".color("nevy"," Claim VC GOFOOD A");
+        echo "\n".color("nevy"," Claim VC Food");
         echo "\n".color("yellow"," Tunggu Sebentar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
+        }
+        sleep(5);
+        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code"BIARKAMUSEHAT"}');
+        $messageboba09 = fetch_value($boba09,'"message":"','"');
+        echo "\n".color("green"," Message: ".$messageboba09);
+        sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
