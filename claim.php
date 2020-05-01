@@ -73,7 +73,7 @@ echo " ===========================\n";
         sleep(10);
         }
         sleep(20);
-        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHKIRIM"}');
+        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHNGIRIM"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
         if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba10);
